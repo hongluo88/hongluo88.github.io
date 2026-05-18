@@ -44,8 +44,8 @@ a {
   justify-content: space-between;
   gap: 18px;
   padding: 16px 0;
-  background: transparent;
-  backdrop-filter: none;
+  background: rgba(251, 250, 247, 0.84);
+  backdrop-filter: blur(12px);
 }
 
 .wordmark {
@@ -603,14 +603,56 @@ h1 {
 
 @media (max-width: 540px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 14px 0 8px;
   }
 
   .nav-links {
     flex-direction: row;
     align-items: center;
-    gap: 2px;
+    justify-content: flex-end;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-size: 10px;
+  }
+
+  .nav-links a {
+    padding: 6px 0;
+  }
+
+  .floating-objects {
+    z-index: 0;
+  }
+
+  .profile-card {
+    padding-top: 22px;
+    scroll-margin-top: 76px;
+  }
+
+  .single-section {
+    scroll-margin-top: 82px;
+  }
+
+  .profile-photo {
+    margin: 0 auto;
+  }
+
+  .profile-copy > p:not(.section-kicker),
+  .research-heading,
+  .interest-list {
+    font-size: 14px;
+  }
+
+  .tag-cloud {
+    gap: 7px;
+  }
+
+  .tag-cloud span {
+    padding: 6px 10px;
+    font-size: 11px;
   }
 
   h1 {
