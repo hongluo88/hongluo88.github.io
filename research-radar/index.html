@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Radar · Academic opportunities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">R</span><span>Research Radar</span></div>
+      <div class="profile-card">
+        <div class="avatar">HL</div>
+        <div><strong>Hong Luo</strong><small>HCI · Design · Computing</small></div>
+        <span class="status-dot"></span>
+      </div>
+      <nav>
+        <a class="active" href="#dashboard"><span>◈</span>机会总览</a>
+        <a href="#saved"><span>♡</span>已收藏 <b id="savedCount">0</b></a>
+        <a href="#digest"><span>✦</span>邮件摘要</a>
+        <a href="#profile"><span>◎</span>研究画像</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sync-pill"><i></i>机会源已同步</div><small>Demo workspace · v0.1</small></div>
+    </aside>
+
+    <main class="main" id="dashboard">
+      <header class="topbar"><div><span class="eyebrow">THURSDAY · 29 OCTOBER 2026</span><h1>为你的下一站，保持雷达开启。</h1></div><button class="icon-btn" title="通知">◌<span class="notification"></span></button></header>
+      <section class="hero-grid">
+        <div class="hero-card"><div class="hero-kicker">TODAY'S RADAR</div><div class="hero-number">18 <span>new opportunities</span></div><p>过去 24 小时，系统在英国、美国和澳大利亚发现了与你研究方向相关的新机会。</p><div class="mini-bars"><span style="height:38%"></span><span style="height:62%"></span><span style="height:47%"></span><span style="height:75%"></span><span style="height:55%"></span><span style="height:92%"></span><span class="today" style="height:82%"></span></div><div class="bar-labels"><span>23 Oct</span><span>today</span></div></div>
+        <div class="stat-card"><span class="eyebrow">TOP MATCH</span><strong>92%</strong><p>University of Melbourne<br><span>Multisensory Interaction Lab</span></p><div class="match-line"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="stat-card warm"><span class="eyebrow">DEADLINE WATCH</span><strong>04</strong><p>机会将在 14 天内截止<br><span>建议本周优先处理</span></p><button class="text-btn" data-scroll="opportunities">查看截止日期 →</button></div>
+      </section>
+
+      <section class="section-head" id="opportunities"><div><span class="eyebrow">CURATED FOR YOU</span><h2>精选机会</h2></div><div class="controls"><select id="regionFilter"><option value="all">全部地区</option><option>英国</option><option>美国</option><option>澳大利亚</option></select><select id="roleFilter"><option value="all">全部职位</option><option>Postdoctoral Fellow</option><option>Research Fellow</option><option>Lecturer</option><option>Assistant Professor</option></select><button class="filter-btn" id="filterBtn">筛选 <span>☷</span></button></div></section>
+      <div class="opportunity-list" id="opportunityList"></div>
+
+      <section class="bottom-grid">
+        <div class="panel digest-panel" id="digest"><div class="panel-head"><div><span class="eyebrow">EMAIL DIGEST</span><h3>下一封摘要</h3></div><span class="live-label"><i></i>每日 08:00</span></div><div class="email-preview"><div class="email-top"><span class="mail-icon">✉</span><div><strong>Hong Luo</strong><small>hong.luo@monash.edu</small></div><span class="email-date">明天</span></div><h4>你的 HCI 机会摘要 · 5 个值得关注的新机会</h4><p>包括 MIT 的 affective computing 博后、UCL 的 multisensory design research fellow，以及 UNSW 的 immersive interaction lecturer...</p><div class="email-tags"><span>5 new</span><span>3 high match</span><span>2 deadlines</span></div></div><button class="outline-btn" id="previewBtn">预览完整邮件</button></div>
+        <div class="panel profile-panel" id="profile"><div class="panel-head"><div><span class="eyebrow">YOUR RESEARCH GRAPH</span><h3>研究画像</h3></div><button class="more-btn">•••</button></div><div class="tag-cloud"><span class="tag hot">Human–Computer Interaction</span><span class="tag">Affective Computing</span><span class="tag hot">Multisensory Design</span><span class="tag">Wearable Devices</span><span class="tag">More-than-human</span><span class="tag">VR Experience</span></div><div class="profile-foot"><span>6 个核心主题</span><a href="#profile">编辑画像 →</a></div></div>
+      </section>
+      <footer>Research Radar is a personal discovery workspace. Opportunities shown here are demo records until live sources are connected.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="modal"><div class="modal"><button class="close" id="closeModal">×</button><span class="eyebrow">EMAIL PREVIEW</span><h2>你的 HCI 机会摘要</h2><p class="muted">收件人：hong.luo@monash.edu · 明天 08:00</p><div class="modal-email"><h3>5 个值得关注的新机会</h3><div class="modal-row"><b>92%</b><span>Postdoctoral Fellow · University of Melbourne</span></div><div class="modal-row"><b>89%</b><span>Research Fellow · University College London</span></div><div class="modal-row"><b>87%</b><span>Assistant Professor · MIT Media Lab</span></div></div><button class="primary-btn" id="closeModal2">知道了</button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
